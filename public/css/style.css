@@ -1,0 +1,11 @@
+body {
+  background-color: rgb(236, 239, 241);
+}
+
+nav img {
+  width: 150px;
+}
+
+#form-pergunta {
+  margin-top: 5vh;
+}
