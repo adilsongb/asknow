@@ -30,7 +30,12 @@ app.get('/perguntar', (req, res) => {
 app.post('/salvarpergunta', (req, res) => {
   let titulo = req.body.titulo;
   let descricao = req.body.descricao;
-  res.send(`Formulário recebido! Titulo: ${ titulo }`);
+  Perguntas.create({
+    titulo,
+    descricao
+  }).then(() => {
+    res.redirect('/');
+  });
 });
 
 const PORT = process.env.PORT || 3306;

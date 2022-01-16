@@ -1,6 +1,7 @@
 const Sequelize = require('sequelize');
 const connection = require('./database');
 
+// Cria a tabela "perguntas" no banco de dados
 const Perguntas = connection.define('perguntas', {
   titulo: {
     type: Sequelize.STRING,
@@ -12,6 +13,7 @@ const Perguntas = connection.define('perguntas', {
   }
 });
 
+// Sincroniza (cria) a tabela perguntas no banco de dados, caso a tabela não exista.
 Perguntas.sync({ force: false })
   .then(() => {});
 
