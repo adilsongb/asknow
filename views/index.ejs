@@ -12,7 +12,23 @@
 </head>
 <body>
   <%- include('components/navbar.ejs') %>
-  <h1>Estilo do bootstrap</h1>
-  <p>Testando o estilo em um paragrafo</p>
+ 
+  <div class="container">
+    <h1>Perguntas</h1>
+    <hr>
+    <a href="/perguntar" class="btn btn-primary">Perguntar</a>
+    <br>
+    <% perguntas.forEach((pergunta) => { %>
+      <br>
+      <div class="card">
+        <div class="card-body">
+          <h3><%= pergunta.titulo %></h3>
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-primary">Responder</button>
+        </div>
+      </div>
+    <% }) %>
+  </div>
 </body>
 </html>
