@@ -33,7 +33,7 @@ app.post('/salvarpergunta', (req, res) => {
   res.send(`Formulário recebido! Titulo: ${ titulo }`);
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3306;
 
 app.listen(PORT, () => {
   console.log('App rodando!');
