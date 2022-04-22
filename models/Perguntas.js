@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const connection = require('./database');
+const connection = require('./connection');
 
 // Cria a tabela "perguntas" no banco de dados
 const Perguntas = connection.define('perguntas', {
